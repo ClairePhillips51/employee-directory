@@ -3,9 +3,16 @@ import Employee from "../Employee";
 
 function Table(props) {
     const employees = props.employees;
-    let items = [];
+    let items = employees.map(e => {
+        return (
+            <Employee
+                key = {e.login.uuid}
+                employee = {e}
+            />
+        );
+    });
 
-    for (let iEmployee = 0 ; iEmployee < employees.length ; iEmployee++)
+    /*for (let iEmployee = 0 ; iEmployee < employees.length ; iEmployee++)
     {
         items.push(
             <Employee
@@ -13,18 +20,22 @@ function Table(props) {
                 employee = {employees[iEmployee]}
             />
         )
-    }
+    }*/
 
     return (
         <table>
-            <tr>
-                <th></th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Office #</th>
-                <th>Cell #</th>
-            </tr>
-            {items}
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Office #</th>
+                    <th>Cell #</th>
+                </tr>
+            </thead>
+            <tbody>
+                {items}
+            </tbody>
         </table>
     );
 }
