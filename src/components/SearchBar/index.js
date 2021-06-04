@@ -7,8 +7,8 @@ function SearchBar (props) {
         <div>
             <input
                 onChange = {changeHandler}
+                placeholder="Search by name"
             />
-            <button>Search</button>
         </div>
     );
 }
