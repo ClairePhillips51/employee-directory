@@ -12,22 +12,18 @@ function Table(props) {
         );
     });
 
-    /*for (let iEmployee = 0 ; iEmployee < employees.length ; iEmployee++)
-    {
-        items.push(
-            <Employee
-                key = {employees[iEmployee].login.uuid}
-                employee = {employees[iEmployee]}
-            />
-        )
-    }*/
+    function clickHandler() {
+        props.sortByName();
+    }
 
     return (
         <table>
             <thead>
                 <tr>
                     <th></th>
-                    <th>Name</th>
+                    <th>
+                        <button onClick={clickHandler}>Name</button>
+                    </th>
                     <th>Email</th>
                     <th>Office #</th>
                     <th>Cell #</th>
