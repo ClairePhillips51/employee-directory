@@ -5,7 +5,7 @@ function Employee(props) {
     return (
         <tr>
             <td>
-                <img src={employee.picture.thumbnail}/>
+                <img alt="employee" src={employee.picture.thumbnail}/>
             </td>
             <td>{employee.name.first} {employee.name.last}</td>
             <td>{employee.email}</td>
