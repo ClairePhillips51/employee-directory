@@ -1,23 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import API from "./utils/API";
+import React, { useState } from 'react';
+//import SearchBar from "./components/SearchBar";
+import Table from "./components/Table";
 
 function App() {
+  const [employees, setEmployees] = useState([]);
+  API.getRandomEmployees().then(res => {
+    setEmployees(res.data.results);
+    console.log(employees);
+  });
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Table
+      employees = {employees}
+     /> 
     </div>
   );
 }
