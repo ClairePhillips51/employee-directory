@@ -1,7 +1,10 @@
-import React from "react";
+import "./index.css";
+import React, { useState }from "react";
 import Employee from "../Employee";
 
 function Table(props) {
+    const [buttonText, setText] = useState("Name");
+
     const employees = props.employees;
     let items = employees.map(e => {
         return (
@@ -13,7 +16,11 @@ function Table(props) {
     });
 
     function clickHandler() {
-        props.sortByName();
+        const sorted = props.sortByName();
+        if(sorted)
+            setText("Name");
+        else
+            setText("Name ⇩");
     }
 
     return (
@@ -21,8 +28,8 @@ function Table(props) {
             <thead>
                 <tr>
                     <th></th>
-                    <th>
-                        <button onClick={clickHandler}>Name</button>
+                    <th id="nameCol">
+                        <button onClick={clickHandler}>{buttonText}</button>
                     </th>
                     <th>Email</th>
                     <th>Office #</th>
