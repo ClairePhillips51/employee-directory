@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ClairePhillips51/employee-directory/static/css/main.6d4111a7.chunk.css",
+    "main.js": "/ClairePhillips51/employee-directory/static/js/main.57e86042.chunk.js",
+    "main.js.map": "/ClairePhillips51/employee-directory/static/js/main.57e86042.chunk.js.map",
+    "runtime-main.js": "/ClairePhillips51/employee-directory/static/js/runtime-main.02bfa9ed.js",
+    "runtime-main.js.map": "/ClairePhillips51/employee-directory/static/js/runtime-main.02bfa9ed.js.map",
+    "static/js/2.dfb3372a.chunk.js": "/ClairePhillips51/employee-directory/static/js/2.dfb3372a.chunk.js",
+    "static/js/2.dfb3372a.chunk.js.map": "/ClairePhillips51/employee-directory/static/js/2.dfb3372a.chunk.js.map",
+    "static/js/3.6ff514e1.chunk.js": "/ClairePhillips51/employee-directory/static/js/3.6ff514e1.chunk.js",
+    "static/js/3.6ff514e1.chunk.js.map": "/ClairePhillips51/employee-directory/static/js/3.6ff514e1.chunk.js.map",
+    "index.html": "/ClairePhillips51/employee-directory/index.html",
+    "static/css/main.6d4111a7.chunk.css.map": "/ClairePhillips51/employee-directory/static/css/main.6d4111a7.chunk.css.map",
+    "static/js/2.dfb3372a.chunk.js.LICENSE.txt": "/ClairePhillips51/employee-directory/static/js/2.dfb3372a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.02bfa9ed.js",
+    "static/js/2.dfb3372a.chunk.js",
+    "static/css/main.6d4111a7.chunk.css",
+    "static/js/main.57e86042.chunk.js"
+  ]
+}
