@@ -3,7 +3,7 @@ import React, { useState }from "react";
 import Employee from "../Employee";
 
 function Table(props) {
-    const [buttonText, setText] = useState("Name");
+    const [buttonText, setText] = useState("Name ―");
 
     const employees = props.employees;
     let items = employees.map(e => {
@@ -18,7 +18,7 @@ function Table(props) {
     function clickHandler() {
         const sorted = props.sortByName();
         if(sorted)
-            setText("Name");
+            setText("Name ―");
         else
             setText("Name ⇩");
     }
