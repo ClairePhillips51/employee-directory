@@ -45,6 +45,9 @@ function App() {
 
   return (
     <div className="App">
+      <header>
+        Employee Directory
+      </header>
       <SearchBar
         setFilter = {setFilter}
       />
