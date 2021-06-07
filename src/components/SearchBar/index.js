@@ -1,3 +1,5 @@
+import './index.css';
+
 function SearchBar (props) {
     function changeHandler(e) {
         props.setFilter(e.target.value);
