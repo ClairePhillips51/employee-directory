@@ -1,10 +1,12 @@
 # employee-directory
 
 ## Links
-Link to deployed application [Heroku Link](https://fast-beyond-42631.herokuapp.com/)
+Link to deployed application [GitHub Pages Link](https://clairephillips51.github.io/employee-directory/)
 
 ## Summary
-Using react to create an employee directory to that an employeer can easily view all their employees at once and have quick access to thier information.  
+Using react to create an employee directory so that an employeer can easily view all their employees at once and have quick access to their non-sensitve information.  
+
+![What the Employee Directory looks like](pictures/what-it-looks-like.png)
 
 ## Table of Contents
 1. [Usage](#usage)
@@ -14,31 +16,25 @@ Using react to create an employee directory to that an employeer can easily view
 5. [Getting Started with Create React App](#getting-started-with-create-react-app)
 
 ## Usage
-Creating an employee direction using React. A table displays the employees non-sensitive data with a picture of the employee, their full name, email, office number, and cell phone number.  A search bar at the top of the page lets a user sort the employees by name and a button on the name column of the employee table lets you sort the employees by name in accending order alphabetically. The user can also sort the employees by name alphabetically if the user is using the search bar as well.  
+Creating an employee directory using React. A table displays the employees non-sensitive data with a picture of the employee, their full name, email, office number, and cell phone number.  A search bar at the top of the page under the header lets a user sort the employees by name and a button on the name column of the employee table lets you sort the employees by name in accending order alphabetically. When sorted a down arrows appears next to name so the user will be able to tell easily if the list was sorted. The user can also sort the employees by name alphabetically when using the search bar.  
 
-![Picture of employees sorted alphabetically](pictures/what-it-looks-like.png)
+### Unsorted Employee Directory 
+![Picture of employees unsorted](pictures/unsorted.png)
+
+### Sorted Employee Directory 
+![Picture of employees sorted alphabetically](pictures/sorted.png)
 
 ## Setup
-This application was created in react with componets. UseState is used to manage state and useEffect is used to respond to user events. The app is broken up into three componenets: employee, table, and searchbar. The individual components hold props. 
+This application was created in react with componets. UseState is used to more easily manage state and useEffect is used to respond to user events more effectivly. The app is broken up into three componenets: employee, table, and searchbar. The individual components hold props. UseEffect is helpful in setting up the sorting and filtering capabilites of the table.  
 
-![Manifest created](pictures/mainfest.png)
+![How UseEffect helped with sorting](pictures/search-filter.png)  ![useEffect code](pictures/use-effect.png)
 
-UseEffect is helpful in setting up the sorting and filtering capabilites.  
-
-![Service Worker working](pictures/service-worker.png)
-
-IndexDB is also used to store or hold data/ transcations inside the users browser while the application is offline. The db.js file used in this application was copied from week 17 mini-project but some tweeks were added to it so that the indexDB and service worker could work together. While offline the user can still enter deopsits or expenses into the app those transactions are then stored in the IndexDB on the users browser. 
-
-![IndexDB holding transactions](pictures/offline-functionality.png)
+The employee table is limited to the first 100 people that came out the Random User API. This was done so the app will load quicker and not change everytime the page is refreshed to mimic what a real employee directory is like since your employees likely don't change every day. 
 
 ## What I Learned
-This project was difficult to set up at first. I was trying to figure out how the components would talk together and come together in App.js. I ultimaly decided to use hooks as it was easier to manage and change the state of the components with useState and useEffect. 
+This project was difficult to set up at first. I was trying to figure out how the components would talk together and come together in App.js. I ultimaly decided to use hooks as it was easier to manage and change the state of the components with useState. UseEffect also took some tweaking and reading, but it helped a lot with how to sort the employees. I chose to sort the employees by name as it was the easiest attriubute to pick out of the returned array.  
 
-![db.js export function](pictures/export-function.png)
-
-Styling in react also came with some challenges. I attempted to add a few inline style componenets, but they did not interact well or just didn't work at all so I switched to creating and exporting css files for each component. 
-
-![Service worker fix](pictures/service-fix.png)
+Getting the app the deploy also took some tweaking as github wasn't getting the right url to the app from 'homepage'. I just had to go correct it in the packagelock.json and then push that for the web app to deploy correctly. 
 
 ## Resources
 * [CSS Styling in React](https://reactjs.org/docs/faq-styling.html)
@@ -118,6 +114,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-# May need later
-package.json:  "homepage": "https://github.com/ClairePhillips51/employee-directory#readme"
